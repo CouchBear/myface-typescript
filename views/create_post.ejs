@@ -1,21 +1,21 @@
 <html lang="en-gb">
-<%- include('_head') -%>
-    <%- include('_header') -%>
+<header><%- include('_head') -%>
+        <nav><%- include('_header') -%></nav>
+</header>
+<main>
+    <h1>Create Post</h1>
 
-        <body>
-            <h1>Create Post</h1>
-
-            <form method="post" action="/posts/create">
-                <label>
-                    Message:
-                    <input type="text" name="message" required="required" />
-                </label>
-                <label>
-                    imageUrl:
-                    <input type="url" name="imageUrl" required="required" />
-                    <button type="submit">Submit</button>
-            </form>
-        </body>
-        <%- include('_footer') -%>
+    <form method="post" action="/posts/create">
+        <label>
+            <b>Message:</b>
+            <input type="text" name="message" required="required" />
+        </label>
+        <label>
+            <b>imageUrl:</b>
+            <input type="url" name="imageUrl" required="required" />
+            <button type="submit">Submit</button>
+    </form>
+</main>
+<footer><%- include('_footer') -%></footer>
 
 </html>

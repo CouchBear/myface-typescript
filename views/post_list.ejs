@@ -16,10 +16,11 @@
                 </p>
                 <form method="post" action="/posts/<%=post.id%>/like/">
                     <button type="submit">Like</button>
+                    <button type="submit" formaction="/posts/<%=post.id%>/dislike/">
+                        Dislike
+                    </button>
                 </form>
-                <form method="post" action="/posts/<%=post.id%>/dislike/">
-                    <button type="submit">Dislike</button>
-                </form>
+
             </li>
             <% }); %>
     </ol>
@@ -29,7 +30,7 @@
             <%if (postList.previous) { %>
                 <a href="<%= postList.previous %>">Previous</a>
                 <% } %>
-
+                    <p><a href="/posts/create">Create A New Post</a></p>
 
 </main>
 <footer><%- include('_footer') -%></footer>
