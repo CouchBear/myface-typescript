@@ -14,6 +14,7 @@
                         <%= format(post.createdAt, "yyyy-MM-dd HH:mm:ss" ) %>
                     </small>
                 </p>
+                <p><img src="<%=post.imageUrl%>" alt="post image" width="500" height="300"></p>
                 <form method="post" action="/posts/<%=post.id%>/like/">
                     <button type="submit">Like</button>
                     <button type="submit" formaction="/posts/<%=post.id%>/dislike/">
