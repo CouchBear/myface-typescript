@@ -1,7 +1,8 @@
 <html lang="en-gb">
 <header><%- include('_head') -%>
-        <nav><%- include('_header') -%></nav>
+
 </header>
+<nav><%- include('_header') -%></nav>
 <main>
     <h1>Posts</h1>
     <ol>
@@ -14,10 +15,10 @@
                         <%= format(post.createdAt, "yyyy-MM-dd HH:mm:ss" ) %>
                     </small>
                 </p>
-                <p><img src="<%=post.imageUrl%>" alt="post image" width="500" height="300"></p>
+                <p><img src="<%=post.imageUrl%>" alt="post image"></p>
                 <form method="post" action="/posts/<%=post.id%>/like/">
-                    <button type="submit">Like</button>
-                    <button type="submit" formaction="/posts/<%=post.id%>/dislike/">
+                    <button type="submit" id="like">Like</button>
+                    <button type="submit" id="dislike" formaction="/posts/<%=post.id%>/dislike/">
                         Dislike
                     </button>
                 </form>
@@ -31,7 +32,7 @@
             <%if (postList.previous) { %>
                 <a href="<%= postList.previous %>">Previous</a>
                 <% } %>
-                    <p><a href="/posts/create">Create A New Post</a></p>
+
 
 </main>
 <footer><%- include('_footer') -%></footer>
