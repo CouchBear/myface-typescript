@@ -25,7 +25,7 @@ nav {
     padding: 0;
     background-color: #151820;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
 
     justify-content: space-between;
 
@@ -37,8 +37,8 @@ nav h5 {
     font-size: 10px;
     display: inline;
     padding: 0;
-    margin-left: 0;
-    margin-bottom: 0;
+
+    margin: 0
 }
 
 .nav_items {
@@ -151,11 +151,20 @@ main {
 
 }
 
+.opaque {
+    background-color: #252A38;
+    opacity: 0.56;
+    width: 275;
+    height: 20px;
+    position: absolute;
+    top: 80px;
+}
+
 .profile {
     height: 50px;
     width: 275px;
     display: flex;
-    top: 80px;
+    top: 75px;
     padding: 5px;
     margin-left: 40px;
     position: absolute;
@@ -170,11 +179,15 @@ main {
     margin-right: 30px
 }
 
+.profile_name {
+    font-size: 2em;
+}
+
 .profile_body {
 
     font-size: 0.5em;
     color: white;
-    margin-top: 10px;
+    margin-top: 0;
     margin-left: 50px;
 }
 
@@ -221,11 +234,16 @@ main {
 
 .load_button {
     color: #2985FF;
-    border: 1 solid #2985FF;
+    border: 1px solid #2985FF;
     width: 60px;
     height: 15px;
     font-size: 0.2em;
     background-color: #252A38;
     margin: 0;
     padding: 0
+}
+
+.date {
+    color: grey;
+    font-size: 0.1em;
 }

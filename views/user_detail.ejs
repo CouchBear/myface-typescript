@@ -7,10 +7,11 @@
     <section class="user">
 
         <img class="coverImage" src="<%= coverImageUrl %>" alt="cover image">
+        <div class="opaque"></div>
         <div class="profile">
             <img class="profile_image" src="<%= profileImageUrl %>" alt="profile image">
             <div class="profile_body">
-                <p>
+                <p class="profile_name">
                     <%= name %>
                 </p>
                 <p>
@@ -27,74 +28,78 @@
     </section>
 
     <section>
-        <p class="posts_types">Posts</p>
-        <div class="posts">
-            <%for(let i=0;i<6;i++ ) {%>
-                <div class="card">
-                    <img class="card_image" src="<%= posts[i].imageUrl %>">
-                    <div class="card_body">
-                        <h4>
-                            <%=name%>
-                        </h4>
-                        <h4>
-                            <%= posts[i].createdAt %>
-                        </h4>
-                        <p class="message">
-                            <%= posts[i].message %>
-                        </p>
-                    </div>
+        <p class="posts_types">
+            <%= name.substring(0, name.indexOf(' ')) %>' s Posts</p>
+                <div class="posts">
+                    <%for(let i=0;i<6;i++ ) {%>
+                        <div class="card">
+                            <img class="card_image" src="<%= posts[i].imageUrl %>">
+                            <div class="card_body">
+                                <h4>
+                                    <%=name%>
+                                </h4>
+                                <h4 class="date">
+
+                                    <%= posts[i].createdAt %>
+                                </h4>
+                                <p class="message">
+                                    <%= posts[i].message %>
+                                </p>
+                            </div>
+                        </div>
+                        <%}%>
                 </div>
-                <%}%>
-        </div>
-        <button class="load_button">Load More</button>
+                <button class="load_button">Load More</button>
     </section>
 
     <section>
-        <p class="posts_types">Likes</p>
-        <div class="posts">
-            <%for(let i=0;i<6;i++ ) {%>
-                <div class="card">
-                    <img class="card_image" src="<%= likes[i].imageUrl %>">
-                    <div class="card_body">
-                        <h4>
-                            <%=name%>
-                        </h4>
-                        <h4>
-                            <%= likes[i].createdAt %>
-                        </h4>
-                        <p class="message">
-                            <%= likes[i].message %>
-                        </p>
-                    </div>
-                </div>
+        <p class="posts_types">
+            <%= name.substring(0, name.indexOf(' ')) %>' s Likes</p>
+                <div class="posts">
+                    <%for(let i=0;i<6;i++ ) {%>
+                        <div class="card">
+                            <img class="card_image" src="<%= likes[i].imageUrl %>">
+                            <div class="card_body">
+                                <h4>
+                                    <%=name%>
+                                </h4>
+                                <h4 class="date">
+                                    <%= likes[i].createdAt %>
+                                </h4>
+                                <p class="message">
+                                    <%= likes[i].message %>
+                                </p>
+                            </div>
+                        </div>
 
-                <%}%>
-        </div>
-        <button class="load_button">Load More</button>
+                        <%}%>
+                </div>
+                <button class="load_button">Load More</button>
     </section>
 
     <section>
-        <p class="posts_types">Dislikes</p>
-        <div class="posts">
+        <p class="posts_types">
+            <%= name.substring(0, name.indexOf(' ')) %>' s Dislikes</p>
+                <div class="posts">
 
-            <%for(let i=0;i<6;i++ ) {%>
-                <div class="card">
-                    <img class="card_image" src="<%= dislikes[i].imageUrl %>">
-                    <div class="card_body">
-                        <h4>
-                            <%=name%>
-                        </h4>
-                        <h4>
-                            <%= dislikes[i].reatedAt %>
-                        </h4>
-                        <p class="message">
-                            <%= dislikes[i].message %>
-                        </p>
-                    </div>
+                    <%for(let i=0;i<6;i++ ) {%>
+                        <div class="card">
+                            <img class="card_image" src="<%= dislikes[i].imageUrl %>">
+                            <div class="card_body">
+                                <h4>
+                                    <%=name%>
+                                </h4>
+                                <h4 class="date">
+                                    <%= dislikes[i].createdAt %>
+                                </h4>
+                                <p class="message">
+                                    <%= dislikes[i].message %>
+                                </p>
+                            </div>
+                        </div>
+                        <%}%>
                 </div>
-                <%}%>
-        </div>
-        <button class="load_button">Load More</button>
+                <button class="load_button">Load More</button>
     </section>
 
 
