@@ -7,26 +7,59 @@ html {
 
 }
 
+header {
+    margin: 0;
+    background-color: #151820;
+}
+
 body {
     padding: 0;
     margin: 0;
 }
 
 nav {
-    height: 67px;
+    margin-left: 50px;
+    margin-right: 50px;
+    width: 275px;
+    height: 50px;
     padding: 0;
     background-color: #151820;
     display: flex;
-    justify-content: center;
-    justify-items: center;
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    font-size: 10px;
+}
+
+nav h5 {
+    color: white;
+    font-size: 10px;
+    display: inline;
+    padding: 0;
+    margin-left: 0;
+    margin-bottom: 0;
 }
 
 .nav_items {
-    margin-left: 0;
-    margin-right: 50px;
-    justify-content: center;
-    justify-items: center;
+    display: flex;
 
+    justify-content: space-between;
+
+
+
+
+
+
+}
+
+.nav_new {
+    margin-right: 0;
+    margin-bottom: 0;
+    padding: 0;
+    font-size: 10px;
+    color: white;
+    display: inline;
 }
 
 ol {
@@ -52,8 +85,8 @@ main {
 
 .nav_link {
     color: white;
-
-    margin-right: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 
@@ -86,7 +119,7 @@ main {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 80px);
-    grid-template-rows: repeat(2, 60px);
+    grid-template-rows: repeat(2, 70px);
     grid-column-gap: 20px;
     grid-row-gap: 30px;
     margin-bottom: 30px;
@@ -137,10 +170,17 @@ main {
     margin-right: 30px
 }
 
-ul {
+.profile_body {
+
     font-size: 0.5em;
     color: white;
-    margin-left: 20px;
+    margin-top: 10px;
+    margin-left: 50px;
+}
+
+.profile_body p {
+    margin: 0;
+    padding: 0;
 }
 
 .posts_types {
@@ -150,8 +190,8 @@ ul {
 
 .card {
 
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
     background-color: #151820;
     margin-bottom: 30px;
     overflow: scroll;
@@ -159,13 +199,13 @@ ul {
 }
 
 .card_image {
-    height: 40px;
-    width: 80px;
+    height: 35px;
+    width: 70px;
 }
 
 .card_body {
-    width: 80px;
-    height: 40px;
+    width: 70px;
+    height: 35px;
     margin-bottom: 20px;
 }
 
@@ -177,4 +217,15 @@ ul {
 .card p {
     font-size: 0.1em;
     color: white;
+}
+
+.load_button {
+    color: #2985FF;
+    border: 1 solid #2985FF;
+    width: 60px;
+    height: 15px;
+    font-size: 0.2em;
+    background-color: #252A38;
+    margin: 0;
+    padding: 0
 }

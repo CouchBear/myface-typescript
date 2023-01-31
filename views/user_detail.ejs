@@ -1,6 +1,6 @@
 <html lang="en-gb">
 <header><%- include('_head') -%>
-        <nav><%- include('_header') -%></nav>
+        <%- include('_header') -%>
 </header>
 
 <main>
@@ -9,21 +9,20 @@
         <img class="coverImage" src="<%= coverImageUrl %>" alt="cover image">
         <div class="profile">
             <img class="profile_image" src="<%= profileImageUrl %>" alt="profile image">
-            <ul>
-                <li>
+            <div class="profile_body">
+                <p>
                     <%= name %>
-                </li>
-
-
-                <li>
+                </p>
+                <p>
                     <%= username %>
-                </li>
+                </p>
 
-                <li>
+                <p>
                     <%= email %>
-                </li>
+                </p>
 
-            </ul>
+
+            </div>
         </div>
     </section>
 
@@ -47,7 +46,7 @@
                 </div>
                 <%}%>
         </div>
-
+        <button class="load_button">Load More</button>
     </section>
 
     <section>
@@ -71,6 +70,7 @@
 
                 <%}%>
         </div>
+        <button class="load_button">Load More</button>
     </section>
 
     <section>
@@ -94,6 +94,7 @@
                 </div>
                 <%}%>
         </div>
+        <button class="load_button">Load More</button>
     </section>
 
 
